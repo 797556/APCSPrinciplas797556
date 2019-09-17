@@ -12,8 +12,8 @@ function setup() {
   //b1 = new ball(random(width), random(height), random(-5,5), random(-5,5));
   //b2 = new ball(random(width), random(height), random(-5,5), random(-5,5));
   //b3 = new ball(random(width), random(height), random(-5,5), random(-5,5));
-  loadballs(700);
-  loadpaddle(1);
+  loadballs(1);
+  loadpaddles(1);
 
 }
 
@@ -27,12 +27,12 @@ function draw() {
 
 function loadballs(n){
   for(var i = 0; i < n; i++){
-    balls [i] = new ball(random(1), random(1), random(-5, 5), random(-5, 5));
+    balls [i] = new ball(random(800), random(5), random(-5, -4), random(4, 5));
   }
 }
-function loadpaddle(x){
+function loadpaddles(x){
   for(var i = 0; i < x; i++){
-    paddles [i] = new paddle(300, 750, 100, 50);
+    paddles [i] = new paddle(250, 700, 200, 50);
   }
 }
 
@@ -42,8 +42,8 @@ function runballs(){
   }
 }
 
-function runpaddle(){
-  for(var i = 0; i < paddle.length; i++){
+function runpaddles(){
+  for(var i = 0; i < paddles.length; i++){
     paddles[i].run();
   }
 }
