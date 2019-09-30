@@ -1,7 +1,6 @@
 
-//  Your Name
-// 	Date or version number
-//  This is a comment
+//  Tommy Ashworth
+// 	Paddle Game September
 //  The setup function function is called once when your program begins
 var c = 0
 var balls = []
@@ -16,7 +15,7 @@ function setup() {
   var cnv = createCanvas(800, 800);
   cnv.position((windowWidth-width)/2, 30);
   background(5, 5, 5);
-
+//This draw function uis where I have it check the game state (whitch is the start game, play game and endgame) and the gamemode which is the diffrfent values that make the game hard or easy
 }
 function draw(){
   if(gameState === 1){
@@ -24,13 +23,25 @@ function draw(){
   }
   if(gameState === 2){
     playGame();
+
   }
   if(gameState === 3){
     endGame();
   }
+  if(gameMode ===1){
+    a = 4
+    b = 5
+  }else if(gameMode === 2){
+    a = 14
+    b = 15
+  }else if(gameMode === 3){
+    a = 29
+    b = 30
+  }
 }
 
 
+//This is start game the code for the buttons and title
 function startGame(){
   if(gameMode ===1){
     a = 4
@@ -54,38 +65,39 @@ function startGame(){
   fill(255, 0, 0);
   text('Hard', 600, 575);
   rect(600, 600, 60, 60);
+  // Above this is the code for the visual buttons
   if(mouseIsPressed &&
     mouseX > 200 &&
     mouseX < 260 &&
     mouseY > 600 &&
     mouseY < 660){
-
-      clear();
       console.log('easy')
       gameMode = 1;
       gameState = 2;
+      loadballs(1)
+      loadpaddles(1)
   }else if(mouseIsPressed &&
     mouseX > 400 &&
     mouseX < 460 &&
     mouseY > 600 &&
     mouseY < 660 ){
-      clear();
       gameMode = 2;
       gameState = 2;
+      
    }else if(mouseIsPressed &&
      mouseX > 600 &&
      mouseX < 660 &&
      mouseY > 600 &&
      mouseY < 660 ){
-       clear();
        gameMode = 3;
        gameState = 2;
+       //above this is the code for clicking the buttons
     }
 }
-//  The function is called @ 30 fps
 
 
 
+//This is the functions for the gamne
 
   function loadballs(n){
     for(var i = 0; i < n; i++){
@@ -109,8 +121,9 @@ function startGame(){
       paddles[i].run();
     }
   }
+  //this is where I call the functions for the game to run
 function playGame(){
-loadballs(n)
+loadballs(1)
 loadpaddles(x)
 runballs()
 runpaddles()
