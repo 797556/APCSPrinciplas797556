@@ -74,6 +74,8 @@ function startGame(){
       console.log('easy')
       gameMode = 1;
       gameState = 2;
+      clear()
+      background(5,5,5)
       loadballs(1)
       loadpaddles(1)
   }else if(mouseIsPressed &&
@@ -83,7 +85,11 @@ function startGame(){
     mouseY < 660 ){
       gameMode = 2;
       gameState = 2;
-      
+      clear()
+      background(5,5,5)
+      loadballs(2)
+      loadpaddles(1)
+
    }else if(mouseIsPressed &&
      mouseX > 600 &&
      mouseX < 660 &&
@@ -91,6 +97,10 @@ function startGame(){
      mouseY < 660 ){
        gameMode = 3;
        gameState = 2;
+       clear()
+       background(5,5,5)
+       loadballs(3)
+       loadpaddles(1)
        //above this is the code for clicking the buttons
     }
 }
@@ -101,7 +111,7 @@ function startGame(){
 
   function loadballs(n){
     for(var i = 0; i < n; i++){
-      balls [i] = new ball(random(800), random(5), random(a, b), random(a, b));
+      balls [i] = new ball(random(5), random(5), random(a, b), random(a, b));
     }
   }
   function loadpaddles(x){
@@ -123,8 +133,7 @@ function startGame(){
   }
   //this is where I call the functions for the game to run
 function playGame(){
-loadballs(1)
-loadpaddles(x)
+
 runballs()
 runpaddles()
 }

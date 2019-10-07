@@ -26,7 +26,11 @@ run(){
     if(this.loc.y > height){
       this.vel.y = -this.vel.y;
       this.loc.y = height-2;
-      this.score = this.score - 2;
+      clear();
+        text('EndGame: your score is logged Press control R to restart. ' , 1, 200)
+      stop()
+      consle.log.this.socre
+      text(' Press control R to restart. ' , 200, 200)
     }
     }
 iscolliding(){
