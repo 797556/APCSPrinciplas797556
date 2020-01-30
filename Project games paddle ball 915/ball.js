@@ -2,10 +2,10 @@ class ball{
   constructor(x, y, dx, dy){
     this.loc = createVector(x, y);
     this.vel = createVector(dx, dy);
-    this.accA = createVector(0, 10);
-    this.accB = createVector(0, -9.9);
+    //this.accA = createVector(0, 10);
+    this.accB = createVector(0, .4);
     this.clr = color(random(255), random(255), random(255))
-    this. score = 0
+    this.score = 0
     }
 run(){
   this.checkedges();
@@ -26,7 +26,8 @@ run(){
     if(this.loc.y > height){
       this.vel.y = -this.vel.y;
       this.loc.y = height-2;
-      this.score = this.score - 2;
+      clear()
+      text('Press Ctrl R to play agian' this.score, 200, 200 )
     }
     }
 iscolliding(){

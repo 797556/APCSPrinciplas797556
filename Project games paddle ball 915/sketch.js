@@ -29,14 +29,14 @@ function draw(){
     endGame();
   }
   if(gameMode ===1){
-    a = 4
-    b = 5
+    a = -10
+    b = 10
   }else if(gameMode === 2){
-    a = 14
-    b = 15
+    a = -10
+    b = 10
   }else if(gameMode === 3){
-    a = 29
-    b = 30
+    a = -10
+    b = 10
   }
 }
 
@@ -44,14 +44,14 @@ function draw(){
 //This is start game the code for the buttons and title
 function startGame(){
   if(gameMode ===1){
-    a = 4
-    b = 5
+    a = 40
+    b = 50
   }else if(gameMode === 2){
-    a = 14
-    b = 15
+    a = 400
+    b = 500
   }else if(gameMode === 3){
-    a = 29
-    b = 30
+    a = 900
+    b = 1000
   }
   textSize(100)
   text('Paddle and Ball', 50, 200);
@@ -71,11 +71,11 @@ function startGame(){
     mouseX < 260 &&
     mouseY > 600 &&
     mouseY < 660){
-      console.log('easy')
       gameMode = 1;
       gameState = 2;
-      loadballs(1)
-      loadpaddles(1)
+      clear();
+      loadballs(1);
+      loadpaddles(1);
   }else if(mouseIsPressed &&
     mouseX > 400 &&
     mouseX < 460 &&
@@ -83,7 +83,10 @@ function startGame(){
     mouseY < 660 ){
       gameMode = 2;
       gameState = 2;
-      
+      clear();
+      loadballs(2);
+      loadpaddles(1);
+
    }else if(mouseIsPressed &&
      mouseX > 600 &&
      mouseX < 660 &&
@@ -91,6 +94,9 @@ function startGame(){
      mouseY < 660 ){
        gameMode = 3;
        gameState = 2;
+       clear();
+       loadballs(3);
+       loadpaddles(1);
        //above this is the code for clicking the buttons
     }
 }
@@ -101,7 +107,7 @@ function startGame(){
 
   function loadballs(n){
     for(var i = 0; i < n; i++){
-      balls [i] = new ball(random(800), random(5), random(a, b), random(a, b));
+      balls [i] = new ball(random(5), random(5), random(a, b), random(a, b));
     }
   }
   function loadpaddles(x){
@@ -123,8 +129,8 @@ function startGame(){
   }
   //this is where I call the functions for the game to run
 function playGame(){
-loadballs(1)
-loadpaddles(x)
+//loadpaddles(x)
 runballs()
 runpaddles()
+
 }

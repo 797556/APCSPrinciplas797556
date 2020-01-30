@@ -1,8 +1,8 @@
-class ball{
+class Boid{
 constructor(x, y, dx, dy){
   this.loc = createVector(x, y);
   this.vel = createVector(dx, dy);
-  this.acc = createVector(0, 1)
+  this.acc = createVector(0, 0)
   this.clr = color(random(255), random(255), random(255))
   }
 run(){
@@ -25,12 +25,20 @@ checkedges(){
     this.loc.y = height-2;
   }
   }
+
 update(){
-  this.vel.add(this.acc);
   this.loc.add(this.vel)
   }
 render(){
+  var distance;
   fill(this.clr)
   ellipse(this.loc.x, this.loc.y, 10, 10);
+
+  for(var i =0; i< boids.length; i++){
+    distance = this.loc.dist([i].loc)
+    if(dist < 200){
+      line(this.loc.x,this.loc.y,boids[i].loc.x, boids[i].loc.y)
+    }
   }
-}// end of ball
+  }
+}// end of boid
