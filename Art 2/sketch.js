@@ -8,7 +8,7 @@ function setup() {
   cnv.position((windowWidth-width)/2, 30);
   background(255, 255, 255);
 
-  loadBoids(100);
+  loadBoids(1);
 
 }
 

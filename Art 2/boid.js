@@ -31,8 +31,8 @@ update(){
   }
 render(){
   var distance;
-  //fill(this.clr)
-  //ellipse(this.loc.x, this.loc.y, 10, 10);
+  fill(this.clr)
+  ellipse(this.loc.x, this.loc.y, 10, 10);
 
   for(var i =0; i< boids.length; i++){
     distance = this.loc.dist(boids[i].loc)
