@@ -8,20 +8,25 @@ function setup() {
   cnv.position((windowWidth-width)/2, 30);
   background(255, 255, 255);
 
-  loadBoids(1);
+
+  loadBoids(50);
 
 }
 
 //  The draw function is called @ 30 fps
 function draw() {
-  background(2,2,2);
+  background(5,5,5, 20);
   runBoids();
+  fill(255,0,0)
+  ellipse(400, 400, 50, 50);
+  textSize(80)
+  text('Spider-Man Egg', 115,115)
 
 }
 
 function loadBoids(n){
   for(var i = 0; i < n; i++){
-    boids[i] = new Boid(random(800), random(800), random(-1, 1), random(-1, 1));
+    boids[i] = new Boid(400, 400, random(-.1, .1), random(-.1, .1));
   }
 }
 
