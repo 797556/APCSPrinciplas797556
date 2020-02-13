@@ -26,8 +26,16 @@ run(){
     if(this.loc.y > height){
       this.vel.y = -this.vel.y;
       this.loc.y = height-2;
+<<<<<<< HEAD
       clear()
       text('Press Ctrl R to play agian' this.score, 200, 200 )
+=======
+      clear();
+        text('EndGame: your score is logged Press control R to restart. ' , 1, 200)
+      stop()
+      consle.log.this.socre
+      text(' Press control R to restart. ' , 200, 200)
+>>>>>>> 381741f6bae16888c536c8f926941ff46e3c06d7
     }
     }
 iscolliding(){

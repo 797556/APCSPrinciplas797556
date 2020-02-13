@@ -73,9 +73,16 @@ function startGame(){
     mouseY < 660){
       gameMode = 1;
       gameState = 2;
+<<<<<<< HEAD
       clear();
       loadballs(1);
       loadpaddles(1);
+=======
+      clear()
+      background(5,5,5)
+      loadballs(1)
+      loadpaddles(1)
+>>>>>>> 381741f6bae16888c536c8f926941ff46e3c06d7
   }else if(mouseIsPressed &&
     mouseX > 400 &&
     mouseX < 460 &&
@@ -83,9 +90,16 @@ function startGame(){
     mouseY < 660 ){
       gameMode = 2;
       gameState = 2;
+<<<<<<< HEAD
       clear();
       loadballs(2);
       loadpaddles(1);
+=======
+      clear()
+      background(5,5,5)
+      loadballs(2)
+      loadpaddles(1)
+>>>>>>> 381741f6bae16888c536c8f926941ff46e3c06d7
 
    }else if(mouseIsPressed &&
      mouseX > 600 &&
@@ -94,9 +108,16 @@ function startGame(){
      mouseY < 660 ){
        gameMode = 3;
        gameState = 2;
+<<<<<<< HEAD
        clear();
        loadballs(3);
        loadpaddles(1);
+=======
+       clear()
+       background(5,5,5)
+       loadballs(3)
+       loadpaddles(1)
+>>>>>>> 381741f6bae16888c536c8f926941ff46e3c06d7
        //above this is the code for clicking the buttons
     }
 }
@@ -129,7 +150,11 @@ function startGame(){
   }
   //this is where I call the functions for the game to run
 function playGame(){
+<<<<<<< HEAD
 //loadpaddles(x)
+=======
+
+>>>>>>> 381741f6bae16888c536c8f926941ff46e3c06d7
 runballs()
 runpaddles()
 

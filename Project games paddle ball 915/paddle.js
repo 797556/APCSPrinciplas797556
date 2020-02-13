@@ -1,4 +1,4 @@
-var mouseloc;
+vvar mouseloc;
 class paddle{
   constructor(x, y, w, h){
   this.loc = createVector(x, y);
